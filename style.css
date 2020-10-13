@@ -1,7 +1,9 @@
-*{box-sizing: border-box;}
+*{box-sizing: border-box;margin: 0;padding: 0;}
 *::before,*::after{box-sizing: border-box;}
 .skin{
     position: relative;
+    height: 100vh;
+    background-color: #ffe600;
 }
 /* 鼻子 */
 .nose{
@@ -52,4 +54,38 @@
 }
 .eye.right{
     transform: translateX(100px);
+}
+/* 嘴巴 */
+.mouth{
+    width: 160px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 165px;
+    margin-left: -80px;
+}
+.mouth.up{
+    position: relative;
+    top: -10px;
+}
+.mouth .up .lip.left{
+    border: 5px solid #000000;
+    width: 80px;
+    height: 20px;
+    border-radius: 0 0 0 50px;
+    border-color: transparent transparent transparent black;
+    transform: rotate(-16deg) translateX(6px);
+    position: absolute;
+    left: 50%;
+    margin-left: -80px;
+}
+.mouth .up .lip.right{
+    border: 5px solid #000000;
+    width: 80px;
+    height: 20px;
+    border-radius: 0 0 50px 0;
+    border-color: transparent black transparent transparent;
+    transform: rotate(16deg) translateX(-6px);
+    position: relative;
+    left: 80px;
 }
