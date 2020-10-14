@@ -1,4 +1,4 @@
-const code = `
+let code = `
 .skin{
     position: relative;
     height: 50vh;
@@ -169,14 +169,71 @@ const code = `
 }`
 const showCode = document.querySelector('.code')
 const showCodeStyle = document.querySelector('#codeStyle')
+const btns = document.querySelectorAll('button')
 let count = 1
-const showCodeClock = setInterval(() => {
-    if (count > code.length) {
-        window.clearInterval(showCodeClock)
-        return
-    }
+const run = () => {
     showCode.innerText = code.substring(0, count)
     showCodeStyle.innerText = code.substring(0, count)
     showCode.scrollTop = showCode.scrollHeight
     count++
-}, 0);
+}
+
+let showCodeClock = setInterval(() => {
+    if (count > code.length) {
+        window.clearInterval(showCodeClock)
+        return
+    }
+    run()
+}, 0)
+window.clearInterval(showCodeClock)
+btns[2].onclick = () => {
+    window.clearInterval(showCodeClock)
+    showCodeClock = setInterval(() => {
+        if (count > code.length) {
+            window.clearInterval(showCodeClock)
+            return
+        }
+        run()
+    }, 0)
+}
+btns[1].onclick = () => {
+    window.clearInterval(showCodeClock)
+    showCodeClock = setInterval(() => {
+        if (count > code.length) {
+            window.clearInterval(showCodeClock)
+            return
+        }
+        run()
+    }, 250)
+}
+btns[0].onclick = () => {
+    window.clearInterval(showCodeClock)
+    showCodeClock = setInterval(() => {
+        if (count > code.length) {
+            window.clearInterval(showCodeClock)
+            return
+        }
+        run()
+    }, 500)
+}
+btns[3].onclick = () => {
+    window.clearInterval(showCodeClock)
+    showCodeClock = setInterval(() => {
+        if (count > code.length) {
+            window.clearInterval(showCodeClock)
+            return
+        }
+        run()
+    }, 0)
+}
+btns[4].onclick = () => {
+    window.clearInterval(showCodeClock)
+}
+btns[5].onclick = () => {
+    window.clearInterval(showCodeClock)
+    showCode.innerText = ``
+    showCodeStyle.innerText = ``
+    count = 1
+}
+
+

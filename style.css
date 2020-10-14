@@ -4,8 +4,40 @@
 .code{
     position: relative;
     height: 50vh;
+    width: 75%;
     overflow: scroll;
 }
 .code::-webkit-scrollbar{
     display: none;
+}
+.slow{    
+    top: 10px;
+    right: 10px;
+}
+.medium{
+    top: 50px;
+    right: 10px;
+}
+.quick{
+    top: 90px;
+    right: 10px;
+}
+.start{
+    top: 10px;
+    right: 80px;
+}
+.end {
+    top:50px;
+    right: 80px;
+}
+.clear {
+    top:90px;
+    right: 80px;
+}
+button{
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    border: 1px solid red;
+    cursor: pointer;
 }
